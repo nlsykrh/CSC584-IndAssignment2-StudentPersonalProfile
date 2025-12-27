@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Profile Management System</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: "Inter", sans-serif;
+                background: linear-gradient(135deg, #ffe6f2, #e3f2ff, #fff8cc);
+                background-size: 300% 300%;
+                animation: pastelFlow 10s ease infinite;
+                min-height: 100vh;
+                color: #2c3e50;
+            }
+
+            @keyframes pastelFlow {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            /* Header */
+            header {
+                text-align: center;
+                padding: 40px 0 40px;
+            }
+
+            .main-title {
+                font-family: 'Playfair Display', serif;
+                font-size: 48px;
+                margin-bottom: 15px;
+                font-weight: 600;
+                background: linear-gradient(135deg, #3498db, #ff6b95);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .subtitle {
+                font-size: 20px;
+                color: #7f8c8d;
+                margin-bottom: 10px;
+            }
+
+            /* Features Grid */
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin: 10px 0;
+            }
+
+            .feature-card {
+                background: white;
+                border-radius: 16px;
+                padding: 30px;
+                text-align: center;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+                border: 1px solid rgba(255,182,193,0.2);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            }
+
+            .feature-icon {
+                font-size: 48px;
+                margin-bottom: 20px;
+            }
+
+            .feature-title {
+                font-family: 'Playfair Display', serif;
+                font-size: 24px;
+                margin-bottom: 15px;
+                color: #2c3e50;
+            }
+
+            .feature-desc {
+                color: #7f8c8d;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+
+            /* Action Buttons */
+            .action-buttons {
+                text-align: center;
+                margin: 60px 0;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 16px 40px;
+                margin: 0 15px 0px;
+                border-radius: 12px;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-primary {
+                background: linear-gradient(135deg, #d6bcfa, #fefcbf);
+                color: #242322;
+                box-shadow: 0 4px 15px rgba(214, 188, 250, 0.3);
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(214, 188, 250, 0.4);
+            }
+
+            .btn-secondary {
+                background: linear-gradient(135deg, #cbdcf7, #b9fbc0);
+                color: #2c3e50;
+                box-shadow: 0 4px 15px rgba(167, 199, 255, 0.3);
+            }
+
+            .btn-secondary:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(167, 199, 255, 0.4);
+            }
+
+            .btn-view {
+                background: linear-gradient(135deg, #27ae60, #2ecc71);
+                color: white;
+                box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+            }
+
+            .btn-view:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .main-title {
+                    font-size: 36px;
+                }
+                
+                .subtitle {
+                    font-size: 18px;
+                }
+                
+                .features {
+                    grid-template-columns: 1fr;
+                }
+                
+                .btn {
+                    display: block;
+                    width: 80%;
+                    margin: 10px auto;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <h1 class="main-title">Profile Management System</h1>
+                <p class="subtitle">A Complete Student Profile Management Solution</p>
+            </header>
+
+            <!-- Features -->
+            <section class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">Create Profiles</h3>
+                    <p class="feature-desc">
+                        Fill out comprehensive forms to create detailed student profiles with personal 
+                        information, skills, languages, education, and more.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">👁️</div>
+                    <h3 class="feature-title">View Profiles</h3>
+                    <p class="feature-desc">
+                        Browse all student profiles in a beautiful list view with search functionality 
+                        to find profiles by student ID.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✏️</div>
+                    <h3 class="feature-title">Edit & Update</h3>
+                    <p class="feature-desc">
+                        Easily update profile information with our intuitive edit forms. All changes 
+                        are saved directly to the database.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🗑️</div>
+                    <h3 class="feature-title">Delete Profiles</h3>
+                    <p class="feature-desc">
+                        Remove profiles from the system with confirmation prompts to prevent 
+                        accidental deletions.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Search Function</h3>
+                    <p class="feature-desc">
+                        Quickly find profiles using our search feature. Search by  
+                        student ID or filter by programme to locate specific profiles.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3 class="feature-title">Database Storage</h3>
+                    <p class="feature-desc">
+                        All profile data is securely stored in a MySQL database with proper 
+                        data integrity and persistence.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="action-buttons">
+                <a href="profile_form.html" class="btn btn-primary">Create New Profile</a>
+                <a href="viewProfiles.jsp" class="btn btn-secondary">View All Profiles</a>
+            </section>
+
+        <script>
+            // Add some interactive effects
+            document.addEventListener('DOMContentLoaded', function() {
+                const cards = document.querySelectorAll('.feature-card');
+                
+                cards.forEach((card, index) => {
+                    // Add delay to animation
+                    card.style.animationDelay = (index * 0.1) + 's';
+                    card.style.opacity = '0';
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                });
+                
+                // Add CSS animation
+                const style = document.createElement('style');
+                style.textContent = `
+                    @keyframes fadeInUp {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            });
+        </script>
+    </body>
+</html>
